@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,20 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3173584242,1845664488&fm=58&bpow=512&bpoh=512',
-        title: '大连海洋馆',
-        desc: '浪漫的海洋主题公园'
-      }, {
-        id: '0002',
-        imgUrl: 'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=89028962,2811960256&fm=58&w=121&h=140&img.PNG',
-        title: '深圳世界之窗',
-        desc: '炫酷的旅游圣地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
