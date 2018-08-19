@@ -2,7 +2,7 @@
 <template>
   <div id="app">
     <!--路由中的内容加载过一次后就放到内存，以后不会每次都去发送ajax请求-->
-    <keep-alive>
+    <keep-alive exclude="Detail">
       <!-- 显示的是当前路由地址所对应的内容 -->
       <router-view/>
     </keep-alive>
